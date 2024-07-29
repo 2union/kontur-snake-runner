@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://c4t387p7yv86q"]
+
+[ext_resource type="Script" path="res://scripts/cannonball.gd" id="1_4lkdd"]
+[ext_resource type="Texture2D" uid="uid://bhoi0m4ajdam3" path="res://assets/sprites/cannonball.png" id="1_el0ig"]
+[ext_resource type="PackedScene" uid="uid://if4rdriy1mas" path="res://scenes/killzone.tscn" id="2_2y3t3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wm2jw"]
+radius = 5.0
+
+[node name="Cannonball" type="Node2D"]
+script = ExtResource("1_4lkdd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_el0ig")
+
+[node name="Killzone" parent="." instance=ExtResource("2_2y3t3")]
+position = Vector2(-2, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
+position = Vector2(2, -1)
+shape = SubResource("CircleShape2D_wm2jw")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bcmxwsutdybq8"]
+
+[ext_resource type="Texture2D" uid="uid://ccntem8p55su" path="res://assets/sprites/kontur_logo.png" id="1_5x6n6"]
+
+[node name="Kontur" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_5x6n6")

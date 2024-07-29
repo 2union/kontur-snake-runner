@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://dbt0a2qoavasc"]
+
+[ext_resource type="Script" path="res://scripts/teleport.gd" id="1_4hat0"]
+[ext_resource type="Texture2D" uid="uid://dl4ku6xlqjjnv" path="res://assets/sprites/world_tileset.png" id="2_733tg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vvicf"]
+size = Vector2(18, 269)
+
+[node name="Teleport" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_4hat0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -127.5)
+shape = SubResource("RectangleShape2D_vvicf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_733tg")
+region_enabled = true
+region_rect = Rect2(128, 65, 16, 16)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

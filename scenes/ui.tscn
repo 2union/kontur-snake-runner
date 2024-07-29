@@ -1,0 +1,60 @@
+[gd_scene load_steps=7 format=3 uid="uid://bblkeqfuw62vv"]
+
+[ext_resource type="Texture2D" uid="uid://elkvirkplgcu" path="res://assets/sprites/flash.png" id="1_70qhl"]
+[ext_resource type="Script" path="res://scripts/ui.gd" id="1_h0ovb"]
+[ext_resource type="Texture2D" uid="uid://b7wbb8j3lvani" path="res://assets/sprites/snake.png" id="1_uqvac"]
+[ext_resource type="FontFile" uid="uid://cnsjy3777xhkj" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_exi44"]
+[ext_resource type="Texture2D" uid="uid://c0qf02oojw8fv" path="res://assets/sprites/coins.png" id="3_2wknv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_atb5d"]
+atlas = ExtResource("1_uqvac")
+region = Rect2(8, 17, 16, 16)
+
+[node name="UI" type="CanvasLayer"]
+script = ExtResource("1_h0ovb")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -114.0
+offset_top = 3.0
+offset_right = -4.0
+offset_bottom = 115.0
+grow_horizontal = 0
+
+[node name="GridContainer" type="GridContainer" parent="Panel"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 107.0
+offset_bottom = 74.0
+columns = 2
+
+[node name="Snake" type="TextureRect" parent="Panel/GridContainer"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_atb5d")
+expand_mode = 4
+
+[node name="LivesLabel" type="Label" parent="Panel/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_exi44")
+text = "5"
+
+[node name="Flash" type="TextureRect" parent="Panel/GridContainer"]
+layout_mode = 2
+texture = ExtResource("1_70qhl")
+
+[node name="SpeedLabel" type="Label" parent="Panel/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_exi44")
+text = "60"
+
+[node name="Coins" type="TextureRect" parent="Panel/GridContainer"]
+layout_mode = 2
+texture = ExtResource("3_2wknv")
+
+[node name="CoinLabel" type="Label" parent="Panel/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_exi44")
+text = "0"
