@@ -739,16 +739,16 @@ position = Vector2(-2806, -60)
 
 [node name="GuidoOnScreenNotifier" type="VisibleOnScreenNotifier2D" parent="Guido"]
 
-[node name="Sprite2D" type="Sprite2D" parent="Guido"]
-position = Vector2(81.4728, -60)
+[node name="Sprite2D3" type="Sprite2D" parent="Guido"]
+position = Vector2(86.2345, -61)
 scale = Vector2(0.840434, 0.838095)
 texture = ExtResource("17_xiftv")
 
 [node name="GuidoText" type="Label" parent="Guido"]
-offset_left = 26.0
-offset_top = -103.0
-offset_right = 139.0
-offset_bottom = -50.0
+offset_left = 30.7617
+offset_top = -104.0
+offset_right = 143.762
+offset_bottom = -51.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("7_8hhuy")
 theme_override_font_sizes/font_size = 8

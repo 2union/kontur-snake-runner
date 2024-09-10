@@ -1,6 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://ch4he6vkvs70d"]
+[gd_scene load_steps=16 format=3 uid="uid://ch4he6vkvs70d"]
 
 [ext_resource type="Texture2D" uid="uid://d117bntpp2ye1" path="res://assets/sprites/guido.png" id="1_rv1c1"]
+[ext_resource type="Texture2D" uid="uid://b710iw2hwb467" path="res://assets/sprites/coder.png" id="2_ny8cm"]
+[ext_resource type="Texture2D" uid="uid://l4c3yiwx4ivs" path="res://assets/sprites/heat.png" id="3_e33ap"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_053j8"]
 atlas = ExtResource("1_rv1c1")
@@ -95,7 +97,19 @@ animations = [{
 [node name="Guido" type="Node2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+visible = false
 sprite_frames = SubResource("SpriteFrames_3adxj")
 animation = &"idle"
 autoplay = "idle"
 frame_progress = 0.777406
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, -8)
+scale = Vector2(0.151408, 0.151408)
+texture = ExtResource("2_ny8cm")
+flip_h = true
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(1, -43)
+scale = Vector2(0.0353406, 0.0353406)
+texture = ExtResource("3_e33ap")

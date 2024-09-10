@@ -22,21 +22,23 @@ var best_try_message_text = ""
 var top_score_message_text = ""
 var prev_try_message_text = ""
 var dialog = """
-Hey, Python!
-Looks like you too
-slow! I think it's 
-time to do 
-something with it.
+Evil programmer...
+Hm-hm...
+I mean wizard,
+turned you to
+couple of snakes.
 """
 var dialog_two = """
-I did this training
-center to make you
+If you want retun
+your normal
+condition, run
 faster!
 """
 var dialog_three = """
-Now run and don't
-forget about both
-of your parts!
+And in the end...
+I'm kidding you,
+this game have no
+the end! HA-HA-HA!
 """
 
 var dialog_four = """
